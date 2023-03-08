@@ -57,8 +57,8 @@ nowDateTime = now.strftime('%Y-%m-%d_%H%M%S')
 new.save("/home/pi/camera/"+f"{nowDateTime}.png")
 new.show()
 
-qrimg = qrcode.make("
-img = qrcode.make("/home/pi/camera/2023-02-28_162425.png")
-img.save("/home/pi/cameraHistory")
+#qrimg = qrcode.make("
+#img = qrcode.make("/home/pi/camera/2023-02-28_162425.png")
+#img.save("/home/pi/cameraHistory")
 
                 
