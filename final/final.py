@@ -53,7 +53,7 @@ for filename in file_list:
                 break;
                 
 now = datetime.datetime.now()
-nowDateTime = now.strftime('%Y-%m-%d_%H%M%S_')
+nowDateTime = now.strftime('%Y-%m-%d_%H%M%S')
 new.save("/home/pi/camera/"+f"{nowDateTime}.png")
 new.show()
 
