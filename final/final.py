@@ -22,7 +22,9 @@ for i in range (2) :
                 cv2.namedWindow("Window_name", cv2. WINDOW_NORMAL)
                 cv2.setWindowProperty("Window_name", cv2. WND_PROP_FULLSCREEN, cv2. WINDOW_FULLSCREEN)
                 
-                cv2.imshow("dst", dst)
+                img = cv2.imread(f'/home/pi/robo/countdown2/{i}.jpg', cv2.IMREAD_COLOR)
+                cv2.imshow("Window_name", img)
+                #cv2.imshow("dst", dst)
                 cv2.waitKey(1000)
                 time.sleep(0.5)
                 cv2.destroyAllWindows()
