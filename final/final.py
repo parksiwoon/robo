@@ -14,10 +14,10 @@ def return_print(*message):
         return io.getvalue()
 
 for i in range (2) :
-        for i in range(5, 0, -1):
-                src = cv2.imread(f'/home/pi/robo/icon/{i}.jpg', cv2.IMREAD_COLOR)
+        for i in range(1, 7):
+                #src = cv2.imread(f'/home/pi/robo/countdown2/{i}.jpg', cv2.IMREAD_COLOR)
         
-                dst = cv2.resize(src, dsize=(720,432), interpolation=cv2.INTER_AREA)
+                #dst = cv2.resize(src, dsize=(720,432), interpolation=cv2.INTER_AREA)
 
                 cv2.namedWindow("Window_name", cv2. WINDOW_NORMAL)
                 cv2.setWindowProperty("Window_name", cv2. WND_PROP_FULLSCREEN, cv2. WINDOW_FULLSCREEN)
