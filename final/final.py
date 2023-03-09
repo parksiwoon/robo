@@ -57,7 +57,8 @@ for filename in file_list:
                 
 now = datetime.datetime.now()
 nowDateTime = now.strftime('%Y-%m-%d_%H%M%S')
-new.save("/home/pi/camera/"+f"{nowDateTime}.png")
+name = return_print(sys.argv[1])
+new.save("/home/pi/cameraHistory/"+f"{name}.png")
 new.show()
 
 #qrimg = qrcode.make("
