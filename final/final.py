@@ -19,8 +19,9 @@ for i in range (2) :
         
                 dst = cv2.resize(src, dsize=(720,432), interpolation=cv2.INTER_AREA)
 
-                i = "test"
-                cv2.moveWindow(i,-100, -100)
+                cv2.namedWindow("Window_name", cv2. WINDOW_NORMAL)
+                cv2.setWindowProperty("Window_name", cv2. WND_PROP_FULLSCREEN, cv2. WINDOW_FULLSCREEN)
+                
                 cv2.imshow("dst", dst)
                 cv2.waitKey(1000)
                 time.sleep(0.5)
