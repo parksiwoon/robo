@@ -23,7 +23,7 @@ for i in range (2) :
                 cv2.setWindowProperty("Window_name", cv2. WND_PROP_FULLSCREEN, cv2. WINDOW_FULLSCREEN)
                 cv2.moveWindow("Window_name", x=0, y=0)
                 img = cv2.imread(f'/home/pi/robo/countdown2/{i}.jpg', cv2.IMREAD_COLOR)
-                dst = cv2.resize(src, dsize=(800, 480), interpolation=cv2.INTER_AREA)
+                dst = cv2.resize(img, dsize=(800, 480), interpolation=cv2.INTER_AREA)
                 #cv2.imshow("Window_name", img)
                 cv2.imshow("dst", dst)
                 cv2.waitKey(1000)
