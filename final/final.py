@@ -15,7 +15,7 @@ def return_print(*message):
 
 for i in range (2) :
         for i in range(1, 7):
-                #src = cv2.imread(f'/home/pi/robo/countdown2/{i}.jpg', cv2.IMREAD_COLOR)
+                #src = cv2.imread(f'/home/pi/robo/countdown_3/{i}.jpg', cv2.IMREAD_COLOR)
         
                 #dst = cv2.resize(src, dsize=(720,432), interpolation=cv2.INTER_AREA)
 
