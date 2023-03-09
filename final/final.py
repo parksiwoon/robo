@@ -1,5 +1,6 @@
 import qrcode
 import os, sys
+from os import remove
 import time
 from picamera import PiCamera
 import cv2
@@ -39,14 +40,16 @@ cnt = 0
 for filename in file_list:
         img = return_print("/home/pi/camera/"+f"{os.path.splitext(filename)[0]}")
         cnt += 1
-        
+
         if cnt == 1:
                 second = Image.open(f"{img}.jpg")
                 new.paste(second, (400,0))
+                remove(f"{img}.jpg")
                 print("cnt = 1 success!")
         if cnt == 2:
                 first = Image.open(f"{img}.jpg")
                 new.paste(first, (0,0))
+                remove(f"{img}.jpg")
                 print("cnt = 2 success!")
         if cnt == 3:
                 print("cnt = 3, break!")
@@ -60,5 +63,3 @@ new.show()
 #qrimg = qrcode.make("
 #img = qrcode.make("/home/pi/camera/2023-02-28_162425.png")
 #img.save("/home/pi/cameraHistory")
-
-                
