@@ -1,12 +1,12 @@
+import cv2
+import time
 import qrcode
 import os, sys
-from os import remove
-import time
-from picamera import PiCamera
-import cv2
-from PIL import Image, ImageDraw, ImageEnhance
 import datetime
+from os import remove
 from io import StringIO
+from picamera import PiCamera
+from PIL import Image, ImageDraw, ImageEnhance
 
 def return_print(*message):
         io = StringIO()
@@ -15,17 +15,11 @@ def return_print(*message):
 
 for i in range (2) :
         for i in range(1, 7):
-                #src = cv2.imread(f'/home/pi/robo/countdown_3/{i}.jpg', cv2.IMREAD_COLOR)
-        
-                #dst = cv2.resize(src, dsize=(720,432), interpolation=cv2.INTER_AREA)
-
                 cv2.namedWindow("Window_name", cv2. WINDOW_NORMAL)
                 cv2.setWindowProperty("Window_name", cv2. WND_PROP_FULLSCREEN, cv2. WINDOW_FULLSCREEN)
                 cv2.moveWindow("Window_name", x=0, y=0)
-                img = cv2.imread(f'/home/pi/robo/countdown2/{i}.jpg', cv2.IMREAD_COLOR)
-                #dst = cv2.resize(img, dsize=(800, 480), interpolation=cv2.INTER_AREA)
+                img = cv2.imread(f'/home/pi/robo/countdown_3/{i}.jpg', cv2.IMREAD_COLOR)
                 cv2.imshow("Window_name", img)
-                #cv2.imshow("dst", dst)
                 cv2.waitKey(1000)
                 time.sleep(0.5)
                 cv2.destroyAllWindows()
@@ -59,12 +53,6 @@ for filename in file_list:
                 print("cnt = 3, break!")
                 break;
                 
-now = datetime.datetime.now()
-nowDateTime = now.strftime('%Y-%m-%d_%H%M%S')
 name = return_print(sys.argv[1])
 new.save("/home/pi/cameraHistory/"+f"{name}.png")
 new.show()
-
-#qrimg = qrcode.make("
-#img = qrcode.make("/home/pi/camera/2023-02-28_162425.png")
-#img.save("/home/pi/cameraHistory")
